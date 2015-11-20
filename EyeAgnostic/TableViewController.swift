@@ -17,18 +17,30 @@ class TableViewController: UITableViewController {
     
     var cases = [Case]()
     
-    func loadSampleData() {
-        let photo1 = UIImage(named: "retino1.jpg")!
-        let sample1 = Case(caseName: "John Doe", caseDate: "2015-11-08", caseImage: photo1, caseNotes: "Age 7")!
+    
+    func loadSampleData(){
+        let photo1 = UIImage(named: "Avery-Fitzgerald.jpg")!
+        let sample1 = Case(caseName: "Avery Fitzgerald", caseDate: "2015-06-08", caseImage: photo1, caseNotes: "Age 10", caseAdditionals: nil)
+        let photo2 = UIImage(named: "retino1.jpg")!
+        let sample2 = Case(caseName: "Matthew Kelly", caseDate: "2014-05-14", caseImage: photo2, caseNotes: "Age 2", caseAdditionals: nil)
         
-        cases += [sample1]
+        cases += [sample1, sample2]
     }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let savedCases = loadCases(){
+            cases += savedCases
+        }
+        
         //Load Sample Data
-        loadSampleData()
+        if cases.isEmpty {
+            loadSampleData()
+        }
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -80,17 +92,19 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
+            cases.removeAtIndex(indexPath.row)
+            saveCases()
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -107,14 +121,53 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowDetail" {
+            let caseDetailViewController = segue.destinationViewController as! NewCaseViewController
+            
+            // Get the cell that generated this segue.
+            if let selectedCaseCell = sender as? CaseTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedCaseCell)!
+                let selectedCase = cases[indexPath.row]
+                caseDetailViewController.newCase = selectedCase
+            }
+        }
+        else if segue.identifier == "AddItem" {
+            
+        }
     }
-    */
+    
+    @IBAction func unwindToCaseList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? NewCaseViewController, curCase = sourceViewController.newCase {
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                // Update an existing case.
+                cases[selectedIndexPath.row] = curCase
+                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+            }
+            else {
+                // Add a new case.
+                let newIndexPath = NSIndexPath(forRow: cases.count, inSection: 0)
+                cases.append(curCase)
+                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            }
+            saveCases()
+        }
+    }
+    // MARK: NSCoding
+    
+    func saveCases() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(cases, toFile: Case.ArchiveURL.path!)
+        if !isSuccessfulSave {
+            print("Failed to save cases...", terminator: "")
+        }
+    }
+    
+    func loadCases() -> [Case]? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Case.ArchiveURL.path!) as? [Case]
+    }
 
 }

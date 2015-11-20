@@ -11,6 +11,8 @@ import AVFoundation
 
 class NewImageViewController: UIViewController {
     
+    var newImage: UIImage?
+    
     let captureSession = AVCaptureSession()
     var previewLayer : AVCaptureVideoPreviewLayer?
     
@@ -40,7 +42,7 @@ class NewImageViewController: UIViewController {
             }
         }
         if devices != nil{
-            println("No Camera Found")
+            print("No Camera Found")
         }
         
         
@@ -48,7 +50,9 @@ class NewImageViewController: UIViewController {
     
     func focusTo(value : Float) {
         if let device = captureDevice {
-            if(device.lockForConfiguration(nil)) {
+            var truth = true
+            do { try device.lockForConfiguration() } catch { truth = false }
+            if(truth) {
                 device.setFocusModeLockedWithLensPosition(value, completionHandler: { (time) -> Void in
                     //
                 })
@@ -58,21 +62,24 @@ class NewImageViewController: UIViewController {
     }
     
     let screenWidth = UIScreen.mainScreen().bounds.size.width
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        var anyTouch = touches.first as? UITouch
-        var touchPercent = anyTouch!.locationInView(self.view).x / screenWidth
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let anyTouch = touches.first! as UITouch
+        let touchPercent = anyTouch.locationInView(self.view).x / screenWidth
         focusTo(Float(touchPercent))
     }
     
-    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
-        var anyTouch = touches.first as? UITouch
-        var touchPercent = anyTouch!.locationInView(self.view).x / screenWidth
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let anyTouch = touches.first! as UITouch
+        let touchPercent = anyTouch.locationInView(self.view).x / screenWidth
         focusTo(Float(touchPercent))
     }
     
     func configureDevice() {
         if let device = captureDevice {
-            device.lockForConfiguration(nil)
+            do {
+                try device.lockForConfiguration()
+            } catch _ {
+            }
             device.focusMode = .Locked
             device.unlockForConfiguration()
         }
@@ -83,15 +90,15 @@ class NewImageViewController: UIViewController {
         
         configureDevice()
         
-        var err : NSError? = nil
-        captureSession.addInput(AVCaptureDeviceInput(device: captureDevice, error: &err))
+        let err : NSError? = nil
+        do { try captureSession.addInput(AVCaptureDeviceInput(device: captureDevice)) } catch {}
         
         if err != nil {
-            println("error: \(err?.localizedDescription)")
+            print("error: \(err?.localizedDescription)")
         }
         
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        self.view.layer.addSublayer(previewLayer)
+        self.view.layer.addSublayer(previewLayer!)
         previewLayer?.frame = self.view.layer.frame
         captureSession.startRunning()
     }

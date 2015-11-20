@@ -17,8 +17,12 @@
 		E0858FEB1BF022E500F66E79 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0858FEA1BF022E500F66E79 /* TableViewController.swift */; };
 		E0858FED1BF024F600F66E79 /* CaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0858FEC1BF024F600F66E79 /* CaseTableViewCell.swift */; };
 		E0858FEF1BF026EB00F66E79 /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0858FEE1BF026EB00F66E79 /* Case.swift */; };
-		E0858FF11BF02A6700F66E79 /* retino1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E0858FF01BF02A6700F66E79 /* retino1.jpg */; };
 		E0858FF41BF0331500F66E79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0858FF21BF0331500F66E79 /* Main.storyboard */; };
+		E0858FF61BF03C7400F66E79 /* NewCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0858FF51BF03C7400F66E79 /* NewCaseViewController.swift */; };
+		E0A310391BF129B600FDDE6F /* AdditionalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A310381BF129B600FDDE6F /* AdditionalsTableViewController.swift */; };
+		E0A3103B1BF12C9A00FDDE6F /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A3103A1BF12C9A00FDDE6F /* ImageTableViewCell.swift */; };
+		E0A3103D1BF1313D00FDDE6F /* Avery-Fitzgerald.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E0A3103C1BF1313D00FDDE6F /* Avery-Fitzgerald.jpg */; };
+		E0A3103F1BF1359200FDDE6F /* retino1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E0A3103E1BF1359200FDDE6F /* retino1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +50,12 @@
 		E0858FEA1BF022E500F66E79 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E0858FEC1BF024F600F66E79 /* CaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseTableViewCell.swift; sourceTree = "<group>"; };
 		E0858FEE1BF026EB00F66E79 /* Case.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
-		E0858FF01BF02A6700F66E79 /* retino1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = retino1.jpg; path = ../../../retino1.jpg; sourceTree = "<group>"; };
 		E0858FF31BF0331500F66E79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E0858FF51BF03C7400F66E79 /* NewCaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCaseViewController.swift; sourceTree = "<group>"; };
+		E0A310381BF129B600FDDE6F /* AdditionalsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalsTableViewController.swift; sourceTree = "<group>"; };
+		E0A3103A1BF12C9A00FDDE6F /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		E0A3103C1BF1313D00FDDE6F /* Avery-Fitzgerald.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Avery-Fitzgerald.jpg"; sourceTree = SOURCE_ROOT; };
+		E0A3103E1BF1359200FDDE6F /* retino1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = retino1.jpg; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,9 @@
 				E05C038C1BEC1F2E00850EED /* FirstViewController.swift */,
 				E0858FEC1BF024F600F66E79 /* CaseTableViewCell.swift */,
 				E0858FF21BF0331500F66E79 /* Main.storyboard */,
+				E0A3103A1BF12C9A00FDDE6F /* ImageTableViewCell.swift */,
+				E0A310381BF129B600FDDE6F /* AdditionalsTableViewController.swift */,
+				E0858FF51BF03C7400F66E79 /* NewCaseViewController.swift */,
 				E0858FEA1BF022E500F66E79 /* TableViewController.swift */,
 				E0858FEE1BF026EB00F66E79 /* Case.swift */,
 				E05C03AE1BEC286700850EED /* ImagesViewController.swift */,
@@ -108,7 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				E05C03891BEC1F2E00850EED /* Info.plist */,
-				E0858FF01BF02A6700F66E79 /* retino1.jpg */,
+				E0A3103E1BF1359200FDDE6F /* retino1.jpg */,
+				E0A3103C1BF1313D00FDDE6F /* Avery-Fitzgerald.jpg */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -174,7 +186,9 @@
 		E05C037D1BEC1F2D00850EED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Skeye Technologies";
 				TargetAttributes = {
 					E05C03841BEC1F2E00850EED = {
@@ -210,10 +224,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0858FF11BF02A6700F66E79 /* retino1.jpg in Resources */,
 				E05C03971BEC1F2E00850EED /* LaunchScreen.xib in Resources */,
 				E05C03941BEC1F2E00850EED /* Images.xcassets in Resources */,
 				E0858FF41BF0331500F66E79 /* Main.storyboard in Resources */,
+				E0A3103D1BF1313D00FDDE6F /* Avery-Fitzgerald.jpg in Resources */,
+				E0A3103F1BF1359200FDDE6F /* retino1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,11 +246,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A310391BF129B600FDDE6F /* AdditionalsTableViewController.swift in Sources */,
 				E05C03AF1BEC286700850EED /* ImagesViewController.swift in Sources */,
 				E0858FEF1BF026EB00F66E79 /* Case.swift in Sources */,
 				E0858FED1BF024F600F66E79 /* CaseTableViewCell.swift in Sources */,
+				E0858FF61BF03C7400F66E79 /* NewCaseViewController.swift in Sources */,
 				E0858FEB1BF022E500F66E79 /* TableViewController.swift in Sources */,
 				E05C038B1BEC1F2E00850EED /* AppDelegate.swift in Sources */,
+				E0A3103B1BF12C9A00FDDE6F /* ImageTableViewCell.swift in Sources */,
 				E05C038D1BEC1F2E00850EED /* FirstViewController.swift in Sources */,
 				E05C03AD1BEC25EC00850EED /* NewImageViewController.swift in Sources */,
 			);
@@ -300,6 +318,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -368,6 +387,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EyeAgnostic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SkeyeTech.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -378,6 +398,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EyeAgnostic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SkeyeTech.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -396,6 +417,7 @@
 				);
 				INFOPLIST_FILE = EyeAgnosticTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SkeyeTech.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EyeAgnostic.app/EyeAgnostic";
 			};
@@ -411,6 +433,7 @@
 				);
 				INFOPLIST_FILE = EyeAgnosticTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SkeyeTech.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EyeAgnostic.app/EyeAgnostic";
 			};
