@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A258711734B243F937D3EC11A0E5F51017067579",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A258711734B243F937D3EC11A0E5F51017067579" : 0,
+    "BF09FB1AB96F272119204B29DFFEC5ABBF7396A9" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4908B23B-3AC5-4C45-9F5B-8FDEBFC21C97",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A258711734B243F937D3EC11A0E5F51017067579" : "EyeAgnostic\/",
+    "BF09FB1AB96F272119204B29DFFEC5ABBF7396A9" : "CMPT275"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "EyeAgnostic",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "EyeAgnostic.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dholleySFU\/EyeAgnostic.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A258711734B243F937D3EC11A0E5F51017067579"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dholleySFU\/CMPT275.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BF09FB1AB96F272119204B29DFFEC5ABBF7396A9"
+    }
+  ]
+}

@@ -14,9 +14,7 @@ class AdditionalsTableViewController: UITableViewController {
     
     var images = [UIImage]()
 
-    @IBOutlet weak var DoneButton: UIBarButtonItem!
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var DateLabel: UILabel!
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,63 +45,26 @@ class AdditionalsTableViewController: UITableViewController {
         return images.count
     }
     
-    var alertController = UIAlertController(title: "Add Image", message: "Add image to profile from:", preferredStyle: UIAlertControllerStyle.Alert)
-    
-    var cameraImage = UIAlertAction(title: "Camera", style: .Default, handler: { (action: UIAlertAction) in
-    openCamera()
-    })
-    
-    var galleryImage = UIAlertAction(title: "Gallery", style: .Default, handler: { (action: UIAlertAction) in
-    openGallary()
-    })
-    
-    func openGallary()
-    {
-        picker!.allowsEditing = false
-        picker!.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        presentViewController(picker!, animated: true, completion: nil)
-    }
-    
-    func analyzePhoto() {
-        // SHANE: algorithm or related calls go here.
-    }
-    
-    
-    func openCamera()
-    {
-        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)){
-            picker!.allowsEditing = false
-            picker!.sourceType = UIImagePickerControllerSourceType.Camera
-            picker!.cameraCaptureMode = .Photo
-            presentViewController(picker!, animated: true, completion: nil)
-        }else{
-            let alert = UIAlertController(title: "Camera Not Found", message: "This device has no Camera", preferredStyle: .Alert)
-            let ok = UIAlertAction(title: "OK", style:.Default, handler: nil)
-            alert.addAction(ok)
-            presentViewController(alert, animated: true, completion: nil)
-        }
-    }
-    
-    
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            //imageView.contentMode = .ScaleAspectFit
-            imageView.image = pickedImage
-        }
-        
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if DoneButton === sender {
-            let caseAdditionals = images
-        }
     }
     
+    @IBAction func unwindToImageList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? NewAddViewController, curImage = sourceViewController.newImage.image{
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                // Update an existing image.
+                images[selectedIndexPath.row] = curImage
+                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+            }
+            else {
+                // Add a new case.
+                let newIndexPath = NSIndexPath(forRow: images.count, inSection: 0)
+                images.append(curImage)
+                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            }
+            
+        }
+    }
+
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
