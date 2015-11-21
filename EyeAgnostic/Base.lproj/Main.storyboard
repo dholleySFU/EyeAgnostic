@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kob-Ue-wSf">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kob-Ue-wSf">
                                 <rect key="frame" x="216" y="277" width="137" height="57"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="New Scan"/>
@@ -27,15 +26,15 @@
                                     <segue destination="cbG-Eq-Jyv" kind="show" id="HuG-tl-nNP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCf-v9-l9g">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCf-v9-l9g">
                                 <rect key="frame" x="217" y="342" width="134" height="59"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Profiles"/>
                                 <connections>
-                                    <segue destination="b46-29-CxR" kind="show" id="4BN-R2-At1"/>
+                                    <segue destination="TLn-IF-OP0" kind="show" id="u0W-sf-UdO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-Bt-SU8">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-Bt-SU8">
                                 <rect key="frame" x="218" y="409" width="133" height="69"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Settings"/>
@@ -43,14 +42,21 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="[Color] Eye Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ye5-al-hwE">
                                 <rect key="frame" x="164" y="43" width="240" height="226"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Ye5-al-hwE" secondAttribute="height" multiplier="120:113" id="Cy4-q1-JU0"/>
+                                    <constraint firstAttribute="height" constant="226" id="Gkf-aO-zje"/>
+                                    <constraint firstAttribute="width" constant="240" id="VN7-4D-YAh"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ye5-al-hwE" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="Igl-oe-vpc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ye5-al-hwE" secondAttribute="trailing" id="LYY-vJ-Uwh"/>
+                            <constraint firstItem="Ye5-al-hwE" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="02Y-dP-Sbc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GCf-v9-l9g" secondAttribute="trailing" id="Mek-bC-yMF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cyS-Bt-SU8" secondAttribute="trailing" id="TgD-m8-smo"/>
+                            <constraint firstItem="cyS-Bt-SU8" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="iKb-en-e3N"/>
+                            <constraint firstItem="kob-Ue-wSf" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="uSZ-Ni-Pwj"/>
+                            <constraint firstItem="GCf-v9-l9g" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="uUw-pj-3AV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kob-Ue-wSf" secondAttribute="trailing" id="y2N-Hh-bcz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ye5-al-hwE" secondAttribute="trailing" id="yL0-VQ-FpF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="EyeAgnostic" id="nxO-3B-0EP"/>
@@ -60,6 +66,63 @@
             <point key="canvasLocation" x="218" y="684"/>
         </scene>
         <!--Profiles-->
+        <scene sceneID="go5-Bs-ZgK">
+            <objects>
+                <tableViewController title="Profiles" id="TLn-IF-OP0" customClass="ProfileTableViewController" customModule="EyeAgnostic" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" id="DbC-vr-k7w">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="91" id="UBZ-aV-KbE" customClass="ProfCellTableViewCell" customModule="EyeAgnostic" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="91"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UBZ-aV-KbE" id="tjd-38-Wys">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lja-Aq-ICe">
+                                            <rect key="frame" x="554" y="29" width="30" height="30"/>
+                                            <state key="normal" title="&gt;"/>
+                                        </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N29-ps-nOg">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrd-UW-Vlb">
+                                            <rect key="frame" x="98" y="34" width="387" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="lja-Aq-ICe" secondAttribute="trailing" constant="8" id="xbo-6L-VSk"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="wrd-UW-Vlb" id="1xf-Tx-md7"/>
+                                    <outlet property="profileImageView" destination="N29-ps-nOg" id="g7h-qi-UgD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TLn-IF-OP0" id="YOe-6d-cPU"/>
+                            <outlet property="delegate" destination="TLn-IF-OP0" id="hLp-PA-Z45"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Profiles" id="8CK-sH-fvW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="J2c-2N-e1d">
+                            <connections>
+                                <segue destination="b46-29-CxR" kind="show" id="G92-Di-FqX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EPI-mM-y7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="232"/>
+        </scene>
+        <!--Table View Controller-->
         <scene sceneID="n95-z2-qFA">
             <objects>
                 <tableViewController id="b46-29-CxR" customClass="TableViewController" customModule="EyeAgnostic" customModuleProvider="target" sceneMemberID="viewController">
@@ -119,17 +182,10 @@
                             <outlet property="delegate" destination="b46-29-CxR" id="fAK-W0-3Vs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Profiles" id="8CK-sH-fvW">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="J2c-2N-e1d">
-                            <connections>
-                                <segue destination="q4m-9I-VIn" kind="show" id="Qda-ox-iJf"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oqG-hj-anR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="916" y="947"/>
+            <point key="canvasLocation" x="916" y="945"/>
         </scene>
         <!--Edit Profile-->
         <scene sceneID="2Nd-cA-QO6">
@@ -448,7 +504,4 @@
         <image name="[Color] Eye Icon.png" width="372" height="372"/>
         <image name="first" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="GDY-dC-cNq"/>
-    </inferredMetricsTieBreakers>
 </document>

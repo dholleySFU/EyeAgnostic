@@ -31,9 +31,9 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let savedCases = loadCases(){
-            cases += savedCases
-        }
+        //if let savedCases = loadCases(){
+        //    cases += savedCases
+        //}
         
         //Load Sample Data
         if cases.isEmpty {
@@ -98,7 +98,7 @@ class TableViewController: UITableViewController {
         if editingStyle == .Delete {
             // Delete the row from the data source
             cases.removeAtIndex(indexPath.row)
-            saveCases()
+            //ProfileTableViewController.saveProfiles()
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -154,20 +154,10 @@ class TableViewController: UITableViewController {
                 cases.append(curCase)
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
-            saveCases()
+            //saveProfiles()
         }
     }
     // MARK: NSCoding
     
-    func saveCases() {
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(cases, toFile: Case.ArchiveURL.path!)
-        if !isSuccessfulSave {
-            print("Failed to save cases...", terminator: "")
-        }
-    }
     
-    func loadCases() -> [Case]? {
-        return NSKeyedUnarchiver.unarchiveObjectWithFile(Case.ArchiveURL.path!) as? [Case]
-    }
-
 }

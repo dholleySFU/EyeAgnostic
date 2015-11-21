@@ -1,20 +1,16 @@
 //
-//  AdditionalsTableViewController.swift
+//  ProfileTableViewController.swift
 //  EyeAgnostic
 //
-//  Created by Derek Holley on 2015-11-09.
-//  Copyright (c) 2015 Skeye Technologies. All rights reserved.
+//  Created by Derek Holley on 2015-11-20.
+//  Copyright © 2015 Skeye Technologies. All rights reserved.
 //
 
 import UIKit
 
-class AdditionalsTableViewController: UITableViewController {
-    
-    var picker:UIImagePickerController?=UIImagePickerController()
-    
-    var images = [UIImage]()
+class ProfileTableViewController: UITableViewController {
 
-        
+    var profiles: [Profile] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,39 +30,32 @@ class AdditionalsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 1
+        // #warning Incomplete implementation, return the number of sections
+        return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return images.count
+        // #warning Incomplete implementation, return the number of rows
+        return 0
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    }
+    // MARK: Saving
     
-    @IBAction func unwindToImageList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.sourceViewController as? NewAddViewController, curImage = sourceViewController.newImage!.addImage{
-            if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                // Update an existing image.
-                images[selectedIndexPath.row] = curImage
-                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
-            }
-            else {
-                // Add a new case.
-                let newIndexPath = NSIndexPath(forRow: images.count, inSection: 0)
-                images.append(curImage)
-                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
-            }
+    func saveProfiles() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(profiles, toFile: Profile.ArchiveURL.path!)
+        if !isSuccessfulSave {
+            print("Failed to save cases...", terminator: "")
         }
     }
+    
+    func loadProfiles() -> [Profile]? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Profile.ArchiveURL.path!) as? [Profile]
+    }
+
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
         // Configure the cell...
 
@@ -77,7 +66,7 @@ class AdditionalsTableViewController: UITableViewController {
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
+        // Return false if you do not want the specified item to be editable.
         return true
     }
     */
@@ -104,7 +93,7 @@ class AdditionalsTableViewController: UITableViewController {
     /*
     // Override to support conditional rearranging of the table view.
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
+        // Return false if you do not want the item to be re-orderable.
         return true
     }
     */
@@ -114,7 +103,7 @@ class AdditionalsTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
+        // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
     */

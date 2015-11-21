@@ -11,14 +11,23 @@ import UIKit
 class NewAddViewController: UIViewController {
     
     @IBOutlet weak var DateField: UITextField!
-    @IBOutlet weak var newImage: UIImageView!
+    @IBOutlet weak var newImageView: UIImageView!
     @IBOutlet weak var SaveButton: UIBarButtonItem!
 
+    var newImage: ImageClass?
+    var picker:UIImagePickerController?=UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        var newImage: UIImage
+        /*
+        if let newImage = newImage {
+            DateField.text   = newImage.date
+            newImageView.image = newImage.image
+        } */
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
