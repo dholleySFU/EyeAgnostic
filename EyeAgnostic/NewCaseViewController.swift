@@ -5,7 +5,7 @@
 //  Created by Derek Holley on 2015-11-08.
 //  Copyright (c) 2015 Skeye Technologies. All rights reserved.
 //
-
+/*
 import UIKit
 
 class NewCaseViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -140,4 +140,4 @@ class NewCaseViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         }
     }
 }
-
+*/

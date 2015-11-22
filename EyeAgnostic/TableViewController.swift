@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Skeye Technologies. All rights reserved.
 //  Group 01
 //
-
+/*
 import UIKit
 
 class TableViewController: UITableViewController {
@@ -34,7 +34,7 @@ class TableViewController: UITableViewController {
         //if let savedCases = loadCases(){
         //    cases += savedCases
         //}
-        
+
         //Load Sample Data
         if cases.isEmpty {
             loadSampleData()
@@ -160,4 +160,5 @@ class TableViewController: UITableViewController {
     // MARK: NSCoding
     
     
-}
+}*/
+

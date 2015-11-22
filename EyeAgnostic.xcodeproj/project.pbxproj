@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E00E05DF1C015B6A00BE26E4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E05DE1C015B6A00BE26E4 /* DetailViewController.swift */; };
+		E00E05E11C015DC300BE26E4 /* ScanClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E05E01C015DC300BE26E4 /* ScanClass.swift */; };
+		E00E05E31C016B2E00BE26E4 /* ScanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E05E21C016B2E00BE26E4 /* ScanTableViewCell.swift */; };
+		E00E05E51C017B9100BE26E4 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E05E41C017B9100BE26E4 /* EditProfileViewController.swift */; };
+		E00E05E71C017CBD00BE26E4 /* oie_DD0EbvM1cJJq.png in Resources */ = {isa = PBXBuildFile; fileRef = E00E05E61C017CBD00BE26E4 /* oie_DD0EbvM1cJJq.png */; };
 		E05C038B1BEC1F2E00850EED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05C038A1BEC1F2E00850EED /* AppDelegate.swift */; };
 		E05C038D1BEC1F2E00850EED /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05C038C1BEC1F2E00850EED /* FirstViewController.swift */; };
 		E05C03941BEC1F2E00850EED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E05C03931BEC1F2E00850EED /* Images.xcassets */; };
@@ -15,8 +20,6 @@
 		E05C03AD1BEC25EC00850EED /* NewImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05C03AC1BEC25EC00850EED /* NewImageViewController.swift */; };
 		E05C03AF1BEC286700850EED /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05C03AE1BEC286700850EED /* ImagesViewController.swift */; };
 		E0858FEB1BF022E500F66E79 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0858FEA1BF022E500F66E79 /* TableViewController.swift */; };
-		E0858FED1BF024F600F66E79 /* CaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0858FEC1BF024F600F66E79 /* CaseTableViewCell.swift */; };
-		E0858FEF1BF026EB00F66E79 /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0858FEE1BF026EB00F66E79 /* Case.swift */; };
 		E0858FF41BF0331500F66E79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0858FF21BF0331500F66E79 /* Main.storyboard */; };
 		E0858FF61BF03C7400F66E79 /* NewCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0858FF51BF03C7400F66E79 /* NewCaseViewController.swift */; };
 		E0A310391BF129B600FDDE6F /* AdditionalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A310381BF129B600FDDE6F /* AdditionalsTableViewController.swift */; };
@@ -26,7 +29,6 @@
 		E0A5E8041BFFF8FF00AD7CE7 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5E8031BFFF8FF00AD7CE7 /* ResultsViewController.swift */; };
 		E0A5E8061BFFFE5C00AD7CE7 /* [Color] Eye Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A5E8051BFFFE5C00AD7CE7 /* [Color] Eye Icon.png */; };
 		E0A5E8081C0000DB00AD7CE7 /* NewAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5E8071C0000DB00AD7CE7 /* NewAddViewController.swift */; };
-		E0A5E80C1C000A9500AD7CE7 /* ImageClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5E80B1C000A9500AD7CE7 /* ImageClass.swift */; };
 		E0A5E80E1C000DDF00AD7CE7 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5E80D1C000DDF00AD7CE7 /* Profile.swift */; };
 		E0A5E8101C0013C900AD7CE7 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5E80F1C0013C900AD7CE7 /* ProfileTableViewController.swift */; };
 		E0A5E8121C0014A800AD7CE7 /* ProfCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5E8111C0014A800AD7CE7 /* ProfCellTableViewCell.swift */; };
@@ -43,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E00E05DE1C015B6A00BE26E4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E00E05E01C015DC300BE26E4 /* ScanClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanClass.swift; sourceTree = "<group>"; };
+		E00E05E21C016B2E00BE26E4 /* ScanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanTableViewCell.swift; sourceTree = "<group>"; };
+		E00E05E41C017B9100BE26E4 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		E00E05E61C017CBD00BE26E4 /* oie_DD0EbvM1cJJq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oie_DD0EbvM1cJJq.png; sourceTree = SOURCE_ROOT; };
 		E05C03851BEC1F2E00850EED /* EyeAgnostic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyeAgnostic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05C03891BEC1F2E00850EED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E05C038A1BEC1F2E00850EED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,8 +62,6 @@
 		E05C03AC1BEC25EC00850EED /* NewImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewImageViewController.swift; sourceTree = "<group>"; };
 		E05C03AE1BEC286700850EED /* ImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
 		E0858FEA1BF022E500F66E79 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		E0858FEC1BF024F600F66E79 /* CaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseTableViewCell.swift; sourceTree = "<group>"; };
-		E0858FEE1BF026EB00F66E79 /* Case.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
 		E0858FF31BF0331500F66E79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0858FF51BF03C7400F66E79 /* NewCaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCaseViewController.swift; sourceTree = "<group>"; };
 		E0A310381BF129B600FDDE6F /* AdditionalsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalsTableViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +71,6 @@
 		E0A5E8031BFFF8FF00AD7CE7 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsViewController.swift; path = ../ResultsViewController.swift; sourceTree = "<group>"; };
 		E0A5E8051BFFFE5C00AD7CE7 /* [Color] Eye Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "[Color] Eye Icon.png"; sourceTree = SOURCE_ROOT; };
 		E0A5E8071C0000DB00AD7CE7 /* NewAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAddViewController.swift; sourceTree = "<group>"; };
-		E0A5E80B1C000A9500AD7CE7 /* ImageClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageClass.swift; path = ../ImageClass.swift; sourceTree = "<group>"; };
 		E0A5E80D1C000DDF00AD7CE7 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		E0A5E80F1C0013C900AD7CE7 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		E0A5E8111C0014A800AD7CE7 /* ProfCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -114,20 +118,21 @@
 				E05C038A1BEC1F2E00850EED /* AppDelegate.swift */,
 				E05C038C1BEC1F2E00850EED /* FirstViewController.swift */,
 				E0A5E8031BFFF8FF00AD7CE7 /* ResultsViewController.swift */,
-				E0858FEC1BF024F600F66E79 /* CaseTableViewCell.swift */,
 				E0858FF21BF0331500F66E79 /* Main.storyboard */,
 				E0A5E80F1C0013C900AD7CE7 /* ProfileTableViewController.swift */,
+				E0A5E8111C0014A800AD7CE7 /* ProfCellTableViewCell.swift */,
+				E00E05DE1C015B6A00BE26E4 /* DetailViewController.swift */,
+				E00E05E41C017B9100BE26E4 /* EditProfileViewController.swift */,
+				E00E05E21C016B2E00BE26E4 /* ScanTableViewCell.swift */,
+				E0A5E80D1C000DDF00AD7CE7 /* Profile.swift */,
+				E00E05E01C015DC300BE26E4 /* ScanClass.swift */,
 				E0A5E8071C0000DB00AD7CE7 /* NewAddViewController.swift */,
 				E0A3103A1BF12C9A00FDDE6F /* ImageTableViewCell.swift */,
 				E0A310381BF129B600FDDE6F /* AdditionalsTableViewController.swift */,
 				E0858FF51BF03C7400F66E79 /* NewCaseViewController.swift */,
-				E0858FEA1BF022E500F66E79 /* TableViewController.swift */,
-				E0858FEE1BF026EB00F66E79 /* Case.swift */,
-				E0A5E8111C0014A800AD7CE7 /* ProfCellTableViewCell.swift */,
-				E0A5E80D1C000DDF00AD7CE7 /* Profile.swift */,
-				E0A5E80B1C000A9500AD7CE7 /* ImageClass.swift */,
 				E05C03AE1BEC286700850EED /* ImagesViewController.swift */,
 				E05C03AC1BEC25EC00850EED /* NewImageViewController.swift */,
+				E0858FEA1BF022E500F66E79 /* TableViewController.swift */,
 				E05C03931BEC1F2E00850EED /* Images.xcassets */,
 				E05C03951BEC1F2E00850EED /* LaunchScreen.xib */,
 				E05C03881BEC1F2E00850EED /* Supporting Files */,
@@ -140,6 +145,7 @@
 			children = (
 				E05C03891BEC1F2E00850EED /* Info.plist */,
 				E0A5E8051BFFFE5C00AD7CE7 /* [Color] Eye Icon.png */,
+				E00E05E61C017CBD00BE26E4 /* oie_DD0EbvM1cJJq.png */,
 				E0A3103E1BF1359200FDDE6F /* retino1.jpg */,
 				E0A3103C1BF1313D00FDDE6F /* Avery-Fitzgerald.jpg */,
 			);
@@ -248,6 +254,7 @@
 				E05C03971BEC1F2E00850EED /* LaunchScreen.xib in Resources */,
 				E05C03941BEC1F2E00850EED /* Images.xcassets in Resources */,
 				E0A5E8061BFFFE5C00AD7CE7 /* [Color] Eye Icon.png in Resources */,
+				E00E05E71C017CBD00BE26E4 /* oie_DD0EbvM1cJJq.png in Resources */,
 				E0858FF41BF0331500F66E79 /* Main.storyboard in Resources */,
 				E0A3103D1BF1313D00FDDE6F /* Avery-Fitzgerald.jpg in Resources */,
 				E0A3103F1BF1359200FDDE6F /* retino1.jpg in Resources */,
@@ -268,22 +275,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E00E05E11C015DC300BE26E4 /* ScanClass.swift in Sources */,
 				E0A5E8121C0014A800AD7CE7 /* ProfCellTableViewCell.swift in Sources */,
 				E0A5E8041BFFF8FF00AD7CE7 /* ResultsViewController.swift in Sources */,
 				E0A310391BF129B600FDDE6F /* AdditionalsTableViewController.swift in Sources */,
 				E05C03AF1BEC286700850EED /* ImagesViewController.swift in Sources */,
 				E0A5E80E1C000DDF00AD7CE7 /* Profile.swift in Sources */,
-				E0858FEF1BF026EB00F66E79 /* Case.swift in Sources */,
-				E0858FED1BF024F600F66E79 /* CaseTableViewCell.swift in Sources */,
 				E0A5E8101C0013C900AD7CE7 /* ProfileTableViewController.swift in Sources */,
+				E00E05DF1C015B6A00BE26E4 /* DetailViewController.swift in Sources */,
 				E0858FF61BF03C7400F66E79 /* NewCaseViewController.swift in Sources */,
 				E0858FEB1BF022E500F66E79 /* TableViewController.swift in Sources */,
+				E00E05E51C017B9100BE26E4 /* EditProfileViewController.swift in Sources */,
+				E00E05E31C016B2E00BE26E4 /* ScanTableViewCell.swift in Sources */,
 				E0A5E8081C0000DB00AD7CE7 /* NewAddViewController.swift in Sources */,
 				E05C038B1BEC1F2E00850EED /* AppDelegate.swift in Sources */,
 				E0A3103B1BF12C9A00FDDE6F /* ImageTableViewCell.swift in Sources */,
 				E05C038D1BEC1F2E00850EED /* FirstViewController.swift in Sources */,
 				E05C03AD1BEC25EC00850EED /* NewImageViewController.swift in Sources */,
-				E0A5E80C1C000A9500AD7CE7 /* ImageClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
