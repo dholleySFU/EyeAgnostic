@@ -123,19 +123,18 @@ class ProfileTableViewController: UITableViewController {
                 profileDetailViewController.currentProfile = selectedProfile
             }
         }
-        else if segue.identifier == "AddItem" {
+        else if segue.identifier == "NewProfile" {
             
         }
     }
     
-    @IBAction func unwindToProfileList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.sourceViewController as? DetailViewController, curProfile = sourceViewController.currentProfile {
+    @IBAction func unwindToProfileList(sender: AnyObject?) {
+        if let sourceViewController = sender!.sourceViewController as? DetailViewController, curProfile = sourceViewController.currentProfile {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 // Update an existing Profile.
                 profiles[selectedIndexPath.row] = curProfile
                 tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
-            }
-            else {
+            } else {
                 // Add a new Profile.
                 let newIndexPath = NSIndexPath(forRow: profiles.count, inSection: 0)
                 profiles.append(curProfile)

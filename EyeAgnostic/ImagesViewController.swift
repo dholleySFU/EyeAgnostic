@@ -18,15 +18,32 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate,UI
     override func viewDidLoad() {
         super.viewDidLoad()
         picker?.delegate=self
+        summonAlert()
         
+    }
+    
+    func summonAlert() {
+        let alertController = UIAlertController(title: "New image", message: "Select method for adding image", preferredStyle: .Alert)
+        
+        let camAction = UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            self.TakePhoto(self)
+        }
+        let galAction = UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            self.OpenGallery(self)        }
+        
+        alertController.addAction(camAction)
+        alertController.addAction(galAction)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
-    
-    // Open Gallery button click
+        // Open Gallery button click
     @IBAction func OpenGallery(sender: AnyObject) {
         openGallary()
     }
@@ -65,6 +82,7 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate,UI
             let ok = UIAlertAction(title: "OK", style:.Default, handler: nil)
             alert.addAction(ok)
             presentViewController(alert, animated: true, completion: nil)
+            summonAlert()
         }
     }
     

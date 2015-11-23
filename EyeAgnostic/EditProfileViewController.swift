@@ -17,8 +17,9 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var dobField: UITextField!
     @IBOutlet weak var notesField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var photoButton: UIButton!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,7 +28,11 @@ class EditProfileViewController: UIViewController {
             lastNameField.text = workingProfile.profileLastName
             dobField.text = workingProfile.birthDate
             notesField.text = workingProfile.additionalNotes
-            imageView.image = workingProfile.profileImage
+            //imageView.image = workingProfile.profileImage
+        }
+        
+        if let image = workingProfile?.profileImage {
+            photoButton.setImage(image, forState: .Normal)
         }
     }
 
@@ -46,8 +51,7 @@ class EditProfileViewController: UIViewController {
         let lastName = lastNameField.text
         let date = dobField.text
         let notes = notesField.text
-        let photo = imageView.image
-            
+        let photo = photoButton.currentImage
             
         // Set the case to be passed to TableViewController after the unwind segue.
         workingProfile = Profile(profileFirstName: firstName!, profileLastName: lastName!, profileImage: photo, birthDate: date!, additionalNotes: notes!, profileScans: workingProfile?.profileScans)

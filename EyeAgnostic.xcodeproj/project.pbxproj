@@ -19,6 +19,8 @@
 		E05C03A31BEC1F2E00850EED /* EyeAgnosticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05C03A21BEC1F2E00850EED /* EyeAgnosticTests.swift */; };
 		E05C03AD1BEC25EC00850EED /* NewImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05C03AC1BEC25EC00850EED /* NewImageViewController.swift */; };
 		E05C03AF1BEC286700850EED /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05C03AE1BEC286700850EED /* ImagesViewController.swift */; };
+		E06B2DC01C027A9B00671EB5 /* noPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = E06B2DBF1C027A9B00671EB5 /* noPhoto.png */; };
+		E06B2DC21C027C1000671EB5 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06B2DC11C027C1000671EB5 /* ScanViewController.swift */; };
 		E0858FEB1BF022E500F66E79 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0858FEA1BF022E500F66E79 /* TableViewController.swift */; };
 		E0858FF41BF0331500F66E79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0858FF21BF0331500F66E79 /* Main.storyboard */; };
 		E0858FF61BF03C7400F66E79 /* NewCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0858FF51BF03C7400F66E79 /* NewCaseViewController.swift */; };
@@ -61,6 +63,8 @@
 		E05C03A21BEC1F2E00850EED /* EyeAgnosticTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeAgnosticTests.swift; sourceTree = "<group>"; };
 		E05C03AC1BEC25EC00850EED /* NewImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewImageViewController.swift; sourceTree = "<group>"; };
 		E05C03AE1BEC286700850EED /* ImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
+		E06B2DBF1C027A9B00671EB5 /* noPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noPhoto.png; sourceTree = SOURCE_ROOT; };
+		E06B2DC11C027C1000671EB5 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		E0858FEA1BF022E500F66E79 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E0858FF31BF0331500F66E79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0858FF51BF03C7400F66E79 /* NewCaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCaseViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 				E00E05DE1C015B6A00BE26E4 /* DetailViewController.swift */,
 				E00E05E41C017B9100BE26E4 /* EditProfileViewController.swift */,
 				E00E05E21C016B2E00BE26E4 /* ScanTableViewCell.swift */,
+				E06B2DC11C027C1000671EB5 /* ScanViewController.swift */,
 				E0A5E80D1C000DDF00AD7CE7 /* Profile.swift */,
 				E00E05E01C015DC300BE26E4 /* ScanClass.swift */,
 				E0A5E8071C0000DB00AD7CE7 /* NewAddViewController.swift */,
@@ -144,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				E05C03891BEC1F2E00850EED /* Info.plist */,
+				E06B2DBF1C027A9B00671EB5 /* noPhoto.png */,
 				E0A5E8051BFFFE5C00AD7CE7 /* [Color] Eye Icon.png */,
 				E00E05E61C017CBD00BE26E4 /* oie_DD0EbvM1cJJq.png */,
 				E0A3103E1BF1359200FDDE6F /* retino1.jpg */,
@@ -256,6 +262,7 @@
 				E0A5E8061BFFFE5C00AD7CE7 /* [Color] Eye Icon.png in Resources */,
 				E00E05E71C017CBD00BE26E4 /* oie_DD0EbvM1cJJq.png in Resources */,
 				E0858FF41BF0331500F66E79 /* Main.storyboard in Resources */,
+				E06B2DC01C027A9B00671EB5 /* noPhoto.png in Resources */,
 				E0A3103D1BF1313D00FDDE6F /* Avery-Fitzgerald.jpg in Resources */,
 				E0A3103F1BF1359200FDDE6F /* retino1.jpg in Resources */,
 			);
@@ -292,6 +299,7 @@
 				E0A3103B1BF12C9A00FDDE6F /* ImageTableViewCell.swift in Sources */,
 				E05C038D1BEC1F2E00850EED /* FirstViewController.swift in Sources */,
 				E05C03AD1BEC25EC00850EED /* NewImageViewController.swift in Sources */,
+				E06B2DC21C027C1000671EB5 /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

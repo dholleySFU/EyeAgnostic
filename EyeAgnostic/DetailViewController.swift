@@ -33,23 +33,21 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.dataSource = self
 
         // Do any additional setup after loading the view.
-    /*
-        nameLabel.text = currentProfile!.profileFirstName + " " + currentProfile!.profileLastName
-        dobLabel.text = dobLabel.text! + currentProfile!.birthDate
-        profileImage?.image = currentProfile!.profileImage
-        //lastDiagLabel.text = dobLabel.text + currentProfile!.
-        notesLabel.text = notesLabel.text! + currentProfile!.additionalNotes
-*/
     }
     
     override func viewWillAppear(animated: Bool) {
+        
         super.viewWillAppear(animated)
         
-        nameLabel.text = currentProfile!.profileFirstName + " " + currentProfile!.profileLastName
-        dobLabel.text = "Date of Birth: " + currentProfile!.birthDate
-        profileImage?.image = currentProfile!.profileImage
-        //lastDiagLabel.text = dobLabel.text + currentProfile!.
-        notesLabel.text = "Notes: " + currentProfile!.additionalNotes
+        if currentProfile == nil {
+            performSegueWithIdentifier("NewProfile", sender: self)
+        } else {
+            nameLabel.text = currentProfile!.profileFirstName + " " + currentProfile!.profileLastName
+            dobLabel.text = "Date of Birth: " + currentProfile!.birthDate
+            profileImage?.image = currentProfile!.profileImage
+            //lastDiagLabel.text = dobLabel.text + currentProfile!.
+            notesLabel.text = "Notes: " + currentProfile!.additionalNotes
+        }
         
     }
     
@@ -80,7 +78,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         let row = indexPath.row
         cell.scanDate.text? += " " + (currentProfile?.profileScans![row].imageDate)!
         if currentProfile?.profileScans![row].result == true {
-            cell.scanResult.text? = "Reuslt: Positive"
+            cell.scanResult.text? = "Result: Positive"
         } else {
             cell.scanResult.text? += "Result: Negative"
         }
@@ -94,9 +92,15 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
             let editViewController = segue.destinationViewController as! EditProfileViewController
             
                 editViewController.workingProfile = currentProfile
-        }
-        else if segue.identifier == "AddItem" {
-            
+        } else if segue.identifier == "ShowScan" {
+            let ScanView = segue.destinationViewController as! ScanViewController
+                
+            // Get the cell that generated this segue.
+            if let selectedScanCell = sender as? ScanTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedScanCell)!
+                let selectedScan = currentProfile?.profileScans![indexPath.row]
+                ScanView.currentScan = selectedScan
+            }
         }
     }
     
