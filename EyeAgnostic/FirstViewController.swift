@@ -10,7 +10,9 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-    //Simple Welcome Screen exlaining the App
+    //Simple Welcome Screen with buttons for other screens
+    
+    var tempScan: ScanClass?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,30 @@ class FirstViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    override func viewDidAppear(animated: Bool) {
+        if tempScan != nil {
+            trans()
+        }
+    }
+    
+    @IBAction func unwindToMain(sender: UIStoryboardSegue) {
+    }
+    
+    func trans() {
+        performSegueWithIdentifier("NewScanToProfile", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "newImageScan" {
+            let imageController = segue.destinationViewController as! ImagesViewController
+            imageController.newBool = true
+        }
+        else if segue.identifier == "NewScanToProfile" {
+            let profController = segue.destinationViewController as! ProfileTableViewController
+            profController.tempScan = tempScan
+            tempScan = nil
+        }
+    }
+    
 }
 

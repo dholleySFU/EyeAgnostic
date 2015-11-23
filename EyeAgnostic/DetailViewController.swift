@@ -45,8 +45,13 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
             nameLabel.text = currentProfile!.profileFirstName + " " + currentProfile!.profileLastName
             dobLabel.text = "Date of Birth: " + currentProfile!.birthDate
             profileImage?.image = currentProfile!.profileImage
-            //lastDiagLabel.text = dobLabel.text + currentProfile!.
+            if currentProfile!.profileScans!.count != 0 {
+                lastDiagLabel.text = "Last Scan: " + currentProfile!.profileScans![0].imageDate
+            } else {
+                lastDiagLabel.text = "Last Scan: "
+            }
             notesLabel.text = "Notes: " + currentProfile!.additionalNotes
+            
         }
         
     }
@@ -64,27 +69,34 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         if currentProfile != nil {
             if currentProfile!.profileScans != nil {
                 return currentProfile!.profileScans!.count
-            } else {
-                return 0
             }
-        } else {
-            return 0
         }
+        return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(scanCellIdentifier, forIndexPath: indexPath) as! ScanTableViewCell
         
         let row = indexPath.row
-        cell.scanDate.text? += " " + (currentProfile?.profileScans![row].imageDate)!
+        cell.scanDate.text = "Date: " + (currentProfile?.profileScans![row].imageDate)!
         if currentProfile?.profileScans![row].result == true {
             cell.scanResult.text? = "Result: Positive"
         } else {
-            cell.scanResult.text? += "Result: Negative"
+            cell.scanResult.text? = "Result: Negative"
         }
         cell.scanImage.image = (currentProfile?.profileScans![row].addImage)
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            // Delete the row from the data source
+            currentProfile!.profileScans!.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -94,6 +106,8 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
                 editViewController.workingProfile = currentProfile
         } else if segue.identifier == "ShowScan" {
             let ScanView = segue.destinationViewController as! ScanViewController
+            let controller:ScanViewController = segue.destinationViewController as! ScanViewController
+            controller.viewControllerNavigatedFrom = segue.sourceViewController
                 
             // Get the cell that generated this segue.
             if let selectedScanCell = sender as? ScanTableViewCell {
@@ -110,6 +124,18 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     @IBAction func unwindToProfileDetail(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? EditProfileViewController, workingProfile = sourceViewController.workingProfile {
             currentProfile = workingProfile
+        }
+        else if let sourceViewController = sender.sourceViewController as? ScanViewController, newScan = sourceViewController.currentScan {
+            
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                // Update an existing Profile.
+                currentProfile?.profileScans![selectedIndexPath.row] = newScan
+                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+            } else {
+                currentProfile?.profileScans?.insert(newScan, atIndex: 0)
+                let newIndexPath = NSIndexPath(forRow: 0, inSection: 0)
+                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Top)
+            }
         }
     }
 }

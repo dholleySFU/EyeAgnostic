@@ -24,6 +24,7 @@
 		E0858FEB1BF022E500F66E79 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0858FEA1BF022E500F66E79 /* TableViewController.swift */; };
 		E0858FF41BF0331500F66E79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0858FF21BF0331500F66E79 /* Main.storyboard */; };
 		E0858FF61BF03C7400F66E79 /* NewCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0858FF51BF03C7400F66E79 /* NewCaseViewController.swift */; };
+		E08FF26A1C02B3D700FF8C45 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08FF2691C02B3D700FF8C45 /* EmailViewController.swift */; };
 		E0A310391BF129B600FDDE6F /* AdditionalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A310381BF129B600FDDE6F /* AdditionalsTableViewController.swift */; };
 		E0A3103B1BF12C9A00FDDE6F /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A3103A1BF12C9A00FDDE6F /* ImageTableViewCell.swift */; };
 		E0A3103D1BF1313D00FDDE6F /* Avery-Fitzgerald.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E0A3103C1BF1313D00FDDE6F /* Avery-Fitzgerald.jpg */; };
@@ -68,6 +69,7 @@
 		E0858FEA1BF022E500F66E79 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E0858FF31BF0331500F66E79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0858FF51BF03C7400F66E79 /* NewCaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCaseViewController.swift; sourceTree = "<group>"; };
+		E08FF2691C02B3D700FF8C45 /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailViewController.swift; path = ../EmailViewController.swift; sourceTree = "<group>"; };
 		E0A310381BF129B600FDDE6F /* AdditionalsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalsTableViewController.swift; sourceTree = "<group>"; };
 		E0A3103A1BF12C9A00FDDE6F /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		E0A3103C1BF1313D00FDDE6F /* Avery-Fitzgerald.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Avery-Fitzgerald.jpg"; sourceTree = SOURCE_ROOT; };
@@ -123,6 +125,7 @@
 				E05C038C1BEC1F2E00850EED /* FirstViewController.swift */,
 				E0A5E8031BFFF8FF00AD7CE7 /* ResultsViewController.swift */,
 				E0858FF21BF0331500F66E79 /* Main.storyboard */,
+				E08FF2691C02B3D700FF8C45 /* EmailViewController.swift */,
 				E0A5E80F1C0013C900AD7CE7 /* ProfileTableViewController.swift */,
 				E0A5E8111C0014A800AD7CE7 /* ProfCellTableViewCell.swift */,
 				E00E05DE1C015B6A00BE26E4 /* DetailViewController.swift */,
@@ -295,6 +298,7 @@
 				E00E05E51C017B9100BE26E4 /* EditProfileViewController.swift in Sources */,
 				E00E05E31C016B2E00BE26E4 /* ScanTableViewCell.swift in Sources */,
 				E0A5E8081C0000DB00AD7CE7 /* NewAddViewController.swift in Sources */,
+				E08FF26A1C02B3D700FF8C45 /* EmailViewController.swift in Sources */,
 				E05C038B1BEC1F2E00850EED /* AppDelegate.swift in Sources */,
 				E0A3103B1BF12C9A00FDDE6F /* ImageTableViewCell.swift in Sources */,
 				E05C038D1BEC1F2E00850EED /* FirstViewController.swift in Sources */,

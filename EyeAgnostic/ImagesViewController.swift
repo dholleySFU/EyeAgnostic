@@ -13,13 +13,19 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate,UI
     //Handles the opening, taking, and processing of new images.
     
     var picker:UIImagePickerController?=UIImagePickerController()
+    var newBool: Bool?
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         picker?.delegate=self
         summonAlert()
         
+    }
+    @IBAction func ReselectPic(sender: UIButton) {
+        summonAlert()
     }
     
     func summonAlert() {
@@ -32,9 +38,12 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate,UI
         let galAction = UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default) {
             UIAlertAction in
             self.OpenGallery(self)        }
+        let CanAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default) {
+            UIAlertAction in }
         
         alertController.addAction(camAction)
         alertController.addAction(galAction)
+        alertController.addAction(CanAction)
         
         self.presentViewController(alertController, animated: true, completion: nil)
     }
@@ -82,10 +91,8 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate,UI
             let ok = UIAlertAction(title: "OK", style:.Default, handler: nil)
             alert.addAction(ok)
             presentViewController(alert, animated: true, completion: nil)
-            summonAlert()
         }
     }
-    
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -98,5 +105,18 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate,UI
         }
         
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "NewScanResult" {
+            let controller:ScanViewController = segue.destinationViewController as! ScanViewController
+            let ScanView = segue.destinationViewController as! ScanViewController
+            controller.viewControllerNavigatedFrom = segue.sourceViewController
+            
+            // Get the cell that generated this segue.
+            ScanView.currentImage = imageView.image
+            ScanView.currentResult = false
+            ScanView.newScanBool = newBool
+        }
     }
 }

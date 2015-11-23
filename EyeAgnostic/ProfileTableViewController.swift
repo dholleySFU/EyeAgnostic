@@ -11,18 +11,18 @@ import UIKit
 class ProfileTableViewController: UITableViewController {
 
     var profiles: [Profile] = []
+    var tempScan: ScanClass?
     
     func loadSampleData(){
         let photo1 = UIImage(named: "Avery-Fitzgerald.jpg")!
         let scan1 = ScanClass(imageDate: "2010-03-02", addImage: photo1, imageTime: "16:00", result: true)
-        let sample1 = Profile(profileFirstName: "Avery", profileLastName: "Fitzerald", profileImage: photo1, birthDate: "2008-06-12", additionalNotes: "", profileScans: [scan1, scan1, scan1, scan1])
+        let sample1 = Profile(profileFirstName: "Avery", profileLastName: "Fitzgerald", profileImage: photo1, birthDate: "2008-06-12", additionalNotes: "", profileScans: [scan1])
         let photo2 = UIImage(named: "retino1.jpg")!
-        let sample2 = Profile(profileFirstName: "Matthew", profileLastName: "Kelly", profileImage: photo2, birthDate: "2004-01-01", additionalNotes: "", profileScans: nil)
+        let sample2 = Profile(profileFirstName: "Matthew", profileLastName: "Kelly", profileImage: photo2, birthDate: "2004-01-01", additionalNotes: "", profileScans: [])
         
         profiles += [sample1, sample2]
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -121,15 +121,20 @@ class ProfileTableViewController: UITableViewController {
                 let indexPath = tableView.indexPathForCell(selectedProfileCell)!
                 let selectedProfile = profiles[indexPath.row]
                 profileDetailViewController.currentProfile = selectedProfile
+                if tempScan != nil {
+                    selectedProfile.profileScans?.insert(tempScan!, atIndex: 0)
+                    tempScan = nil
+                }
             }
+            
         }
         else if segue.identifier == "NewProfile" {
             
         }
     }
-    
-    @IBAction func unwindToProfileList(sender: AnyObject?) {
-        if let sourceViewController = sender!.sourceViewController as? DetailViewController, curProfile = sourceViewController.currentProfile {
+
+    @IBAction func unwindToProfileList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? DetailViewController, curProfile = sourceViewController.currentProfile {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 // Update an existing Profile.
                 profiles[selectedIndexPath.row] = curProfile
