@@ -81,6 +81,11 @@ class ScanViewController: UIViewController {
             let MainView = segue.destinationViewController as! FirstViewController
             MainView.tempScan = currentScan
         }
+        if segue.identifier == "ToEmail" {
+            let MainView = segue.destinationViewController as! EmailPrepViewController
+            MainView.titleText = "Retinoblastoma detected by EyeAgnostic Software"
+            MainView.image = imageView.image
+        }
     }
     
 

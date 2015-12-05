@@ -10,24 +10,41 @@ import UIKit
 import MessageUI
 
 class EmailViewController: UIViewController, MFMailComposeViewControllerDelegate {
+    
+    var recList: [String]?
+    var titleText:String?
+    var bodyText:String?
+    var image: UIImage?
+    var imageData:NSData?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let alert = UIAlertController(title: "Email likely to fail", message: "Email is likel to fail in XCode iOS simulator", preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Email likely to fail", message: "Email is likely to fail in XCode iOS simulator", preferredStyle: .Alert)
         let ok = UIAlertAction(title: "OK", style:.Default, handler: nil)
         alert.addAction(ok)
         presentViewController(alert, animated: true, completion: nil)
         
+        if image != nil {
+            imageData = UIImagePNGRepresentation(image!)
+        }
+        if bodyText == nil {
+            bodyText=""
+        }
+        
         if MFMailComposeViewController.canSendMail() {
-            let toRecipents = ["dholley@sfu.ca"]
-            let emailTitle = "Retinoblastoma detected by EyeAgnostic Software"
-            let messageBody = ""
+            let toRecipents = recList
+            let emailTitle = titleText
+            let messageBody = bodyText
             
             let mc: MFMailComposeViewController = MFMailComposeViewController()
             mc.mailComposeDelegate = self
             mc.setToRecipients(toRecipents)
-            mc.setSubject(emailTitle)
-            mc.setMessageBody(messageBody, isHTML: false)
+            mc.setSubject(emailTitle!)
+            mc.setMessageBody(messageBody!, isHTML: false)
+            if imageData != nil {
+                mc.addAttachmentData(imageData!, mimeType: "image/png", fileName: "image")
+            }
             
             presentViewController(mc, animated: true, completion: nil)
         } else {
