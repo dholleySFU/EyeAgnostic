@@ -19,7 +19,7 @@
 
 + (bool) analyzeResultWithOpenCV: (UIImage*) inputImage
 {
-    bool result = false;
+    bool result = true;
     return result;
 }
 

@@ -11,7 +11,6 @@ import UIKit
 struct Globals {
     static var consentBool = false
     static var retSource:String = "none"
-    var currentLogin: login
 }
 
 
@@ -20,19 +19,17 @@ class LoginViewController: UIViewController {
     var loginStr:login?
     var loginBool:Bool?
 
-    @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var createButton: UIButton!
     @IBAction func loginAction(sender: AnyObject) {
         loginStr = loadLogin()
         if loginStr != nil {
-        if emailField.text == loginStr!.email && passwordField.text == loginStr!.pass {
+        if passwordField.text == loginStr!.pass {
             performSegueWithIdentifier("Login", sender: self)
             }}
     }
     @IBAction func createAction(sender: AnyObject) {
-        loginStr?.email = emailField.text!
         loginStr?.pass = passwordField.text!
         loginStr?.res = false
         saveLogin()
@@ -42,7 +39,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         if let loginStr = loadLogin() {
-            emailField.text = loginStr.email
             createButton.enabled = false
             Globals.consentBool = loginStr.res
             loginBool = true
@@ -63,7 +59,7 @@ class LoginViewController: UIViewController {
     }
     
     func saveLogin() {
-        loginStr = login(email: emailField.text!, pass: passwordField.text!, res: Globals.consentBool)
+        loginStr = login(email: "", pass: passwordField.text!, res: Globals.consentBool)
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(loginStr!, toFile: login.ArchiveURL.path!)
         if !isSuccessfulSave {
             print("Failed to save login.", terminator: "")
@@ -77,7 +73,7 @@ class LoginViewController: UIViewController {
     // MARK: - Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        Globals.init(currentLogin: loginStr!)
+        Globals.consentBool = loginStr!.res
     }
     
 

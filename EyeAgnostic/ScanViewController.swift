@@ -58,7 +58,7 @@ class ScanViewController: UIViewController {
         imageView.image = currentScan!.addImage
         dateLabel.text = "Date: " + currentScan!.imageDate
         timeLabel.text = "Time: " + currentScan!.imageTime
-        if currentScan!.result == true{
+        if currentResult == true{
             resultLabel.text = "Result: Positive"
         } else {
             resultLabel.text = "Result: Negative"

@@ -15,6 +15,8 @@
 //#include <opencv2/imgcodecs.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 //#include <opencv2/features2d.hpp>
+#import <UIKit/UIKit.h>
+#import <opencv2/opencv.hpp>
 
 cv::Mat stitch (std::vector <cv::Mat> & images);
 
@@ -35,5 +37,19 @@ cv::Mat src; cv::Mat dst; cv::Mat detectFace;
 cv::Mat eye1; cv::Mat eye2;
 cv::Mat eye1Trace; cv::Mat eye2Trace;
 cv::Mat eye1Blob; cv::Mat eye2Blob;
+
+@interface UIImage (OpenCV)
+
+//cv::Mat to UIImage
++ (UIImage *)imageWithCVMat:(const cv::Mat&)cvMat;
+- (id)initWithCVMat:(const cv::Mat&)cvMat;
+
+//UIImage to cv::Mat
+- (cv::Mat)CVMat;
+- (cv::Mat)CVMat3;  // no alpha channel
+- (cv::Mat)CVGrayscaleMat;
+
+@end
+
 
 #endif

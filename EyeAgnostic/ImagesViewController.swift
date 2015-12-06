@@ -80,9 +80,11 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate,UI
     
     func analyzePhoto() {
         // SHANE: algorithm or related calls go here.
+        //temp function:
         results = CVWrapper.analyzeResultWithOpenCV(imageView.image)
         imageView.image = CVWrapper.analyzeWithOpenCV(imageView.image) as UIImage
         print("analyzing")
+        performSegueWithIdentifier("NewScanResult", sender: self)
     }
     
     
