@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46C5F11DD0E4A65E61F3EA05 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D3E80BD040EFA9E2611FB74 /* Pods.framework */; };
 		69420B981C12690A00A3C6ED /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69420B971C12690A00A3C6ED /* ConsentDocument.swift */; };
 		69420BA51C1269DC00A3C6ED /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69420BA21C1269CD00A3C6ED /* ResearchKit.framework */; };
 		69420BA61C1269DC00A3C6ED /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69420BA21C1269CD00A3C6ED /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -16,6 +17,7 @@
 		69420BB21C1289DE00A3C6ED /* EmailPrepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69420BB11C1289DE00A3C6ED /* EmailPrepViewController.swift */; };
 		69420BB41C12A90F00A3C6ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69420BB31C12A90F00A3C6ED /* LoginViewController.swift */; };
 		69420BB61C12A9B200A3C6ED /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69420BB51C12A9B200A3C6ED /* login.swift */; };
+		D7F6A58C1C12D68A00724988 /* DropboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F6A58B1C12D68A00724988 /* DropboxViewController.swift */; };
 		E00E05DF1C015B6A00BE26E4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E05DE1C015B6A00BE26E4 /* DetailViewController.swift */; };
 		E00E05E11C015DC300BE26E4 /* ScanClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E05E01C015DC300BE26E4 /* ScanClass.swift */; };
 		E00E05E31C016B2E00BE26E4 /* ScanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E05E21C016B2E00BE26E4 /* ScanTableViewCell.swift */; };
@@ -92,6 +94,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0071491D678AC48F81E6848D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		0D3E80BD040EFA9E2611FB74 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69420B971C12690A00A3C6ED /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 		69420B9B1C1269CD00A3C6ED /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "ResearchKit-master/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
 		69420BAA1C126A2D00A3C6ED /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 		69420BB11C1289DE00A3C6ED /* EmailPrepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailPrepViewController.swift; sourceTree = "<group>"; };
 		69420BB31C12A90F00A3C6ED /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		69420BB51C12A9B200A3C6ED /* login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
+		A4BED9C5A86565CDB372D464 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D7F6A58B1C12D68A00724988 /* DropboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DropboxViewController.swift; path = ../DropboxViewController.swift; sourceTree = "<group>"; };
 		E00E05DE1C015B6A00BE26E4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E00E05E01C015DC300BE26E4 /* ScanClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanClass.swift; sourceTree = "<group>"; };
 		E00E05E21C016B2E00BE26E4 /* ScanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanTableViewCell.swift; sourceTree = "<group>"; };
@@ -140,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69420BA51C1269DC00A3C6ED /* ResearchKit.framework in Frameworks */,
+				46C5F11DD0E4A65E61F3EA05 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +169,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		78A0C8739858773BAB3C8D7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D3E80BD040EFA9E2611FB74 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF7E7289C3B68276A685BF63 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0071491D678AC48F81E6848D /* Pods.debug.xcconfig */,
+				A4BED9C5A86565CDB372D464 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E05C037C1BEC1F2D00850EED = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +193,8 @@
 				E05C03871BEC1F2E00850EED /* EyeAgnostic */,
 				E05C039F1BEC1F2E00850EED /* EyeAgnosticTests */,
 				E05C03861BEC1F2E00850EED /* Products */,
+				AF7E7289C3B68276A685BF63 /* Pods */,
+				78A0C8739858773BAB3C8D7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +210,7 @@
 		E05C03871BEC1F2E00850EED /* EyeAgnostic */ = {
 			isa = PBXGroup;
 			children = (
+				D7F6A58B1C12D68A00724988 /* DropboxViewController.swift */,
 				E05C038A1BEC1F2E00850EED /* AppDelegate.swift */,
 				E05C038C1BEC1F2E00850EED /* FirstViewController.swift */,
 				E0A5E8031BFFF8FF00AD7CE7 /* ResultsViewController.swift */,
@@ -255,10 +282,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E05C03A61BEC1F2E00850EED /* Build configuration list for PBXNativeTarget "EyeAgnostic" */;
 			buildPhases = (
+				CB19AEB523CB9ED6D1B47F6C /* Check Pods Manifest.lock */,
 				E05C03811BEC1F2E00850EED /* Sources */,
 				E05C03821BEC1F2E00850EED /* Frameworks */,
 				E05C03831BEC1F2E00850EED /* Resources */,
 				69420BA91C1269DC00A3C6ED /* Embed Frameworks */,
+				67229BA10C620E51F936E138 /* Embed Pods Frameworks */,
+				58E18EF4F5EA28F244DFAA62 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -375,6 +405,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		58E18EF4F5EA28F244DFAA62 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67229BA10C620E51F936E138 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB19AEB523CB9ED6D1B47F6C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E05C03811BEC1F2E00850EED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -402,6 +480,7 @@
 				E08FF26A1C02B3D700FF8C45 /* EmailViewController.swift in Sources */,
 				E05C038B1BEC1F2E00850EED /* AppDelegate.swift in Sources */,
 				E0A3103B1BF12C9A00FDDE6F /* ImageTableViewCell.swift in Sources */,
+				D7F6A58C1C12D68A00724988 /* DropboxViewController.swift in Sources */,
 				E05C038D1BEC1F2E00850EED /* FirstViewController.swift in Sources */,
 				E05C03AD1BEC25EC00850EED /* NewImageViewController.swift in Sources */,
 				69420BB21C1289DE00A3C6ED /* EmailPrepViewController.swift in Sources */,
@@ -538,6 +617,7 @@
 		};
 		E05C03A71BEC1F2E00850EED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0071491D678AC48F81E6848D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -550,6 +630,7 @@
 		};
 		E05C03A81BEC1F2E00850EED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4BED9C5A86565CDB372D464 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;

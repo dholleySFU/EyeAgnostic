@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyDropbox
 
 class ImagesViewController: UIViewController, UIImagePickerControllerDelegate,UIPopoverControllerDelegate,UINavigationControllerDelegate {
     
@@ -37,7 +38,9 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate,UI
         }
         let galAction = UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default) {
             UIAlertAction in
-            self.OpenGallery(self)        }
+            self.OpenGallery(self)
+            
+        }
         let CanAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default) {
             UIAlertAction in }
         
@@ -119,4 +122,5 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate,UI
             ScanView.newScanBool = newBool
         }
     }
+    
 }

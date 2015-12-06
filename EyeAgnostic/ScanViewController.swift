@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyDropbox
 
 class ScanViewController: UIViewController {
     
@@ -63,7 +64,7 @@ class ScanViewController: UIViewController {
             resultLabel.text = "Result: Negative"
         }
         
-        
+        uploadToDropbox()
         // Do any additional setup after loading the view.
     }
 
@@ -86,6 +87,76 @@ class ScanViewController: UIViewController {
             MainView.titleText = "Retinoblastoma detected by EyeAgnostic Software"
             MainView.image = imageView.image
         }
+    }
+    
+    
+    func uploadToDropbox(){
+        let localAddress = saveToDevice()
+        //if (Dropbox.authorizedClient != nil) {
+        //    DropboxClient.sharedClient.files.upload(path: "", body: localAddress)
+        // }
+ 
+        
+        // Verify user is logged into Dropbox
+        if let client = Dropbox.authorizedClient {
+            
+            // Get the current user's account info
+            client.users.getCurrentAccount().response { response, error in
+                print("*** Get current account ***")
+                if let account = response {
+                    print("Hello \(account.name.givenName)!")
+                } else {
+                    print(error!)
+                }
+            }
+            
+            // List folder
+            client.files.listFolder(path: "").response { response, error in
+                print("*** List folder ***")
+                if let result = response {
+                    print("Folder contents:")
+                    for entry in result.entries {
+                        print(entry.name)
+                    }
+                } else {
+                    print(error!)
+                }
+            }
+            
+            // Upload a file
+          //  let fileData = "Hello!".dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+          //  client.files.upload(path: "/hello.txt", body: fileData!).response { response, error in
+           
+            DropboxClient.sharedClient.files.upload(path: "/" + currentScan!.imageDate + "_" + currentScan!.result.description + ".png", body: localAddress).response { response, error in
+
+            
+                if let metadata = response {
+                    print("*** Upload file ****")
+                    print("Uploaded file name: \(metadata.name)")
+                    print("Uploaded file revision: \(metadata.rev)")
+                    
+                } else {
+                    print(error!)
+                }
+            }
+        }
+        
+    
+    }
+    
+    func getDocumentsDirectory() -> NSString {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
+    
+    func saveToDevice() -> NSURL{
+        if let data = UIImageJPEGRepresentation(imageView.image!, 0.8) {
+            let filename = getDocumentsDirectory().stringByAppendingPathComponent(currentScan!.imageDate + "_" + currentScan!.result.description + ".png")
+            data.writeToFile(filename, atomically: true)
+        }
+        let localAddress = NSURL(string: getDocumentsDirectory().stringByAppendingPathComponent(currentScan!.imageDate + "_" + currentScan!.result.description + ".png"))
+        return localAddress!
     }
     
 
