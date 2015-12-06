@@ -79,6 +79,8 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate,UI
     
     func analyzePhoto() {
         // SHANE: algorithm or related calls go here.
+        //temp function:
+        performSegueWithIdentifier("NewScanResult", sender: self)
     }
     
     

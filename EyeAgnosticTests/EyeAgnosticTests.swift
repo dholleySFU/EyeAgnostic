@@ -5,7 +5,7 @@
 //  Created by Derek Holley on 2015-11-05.
 //  Copyright (c) 2015 Skeye Technologies. All rights reserved.
 //
-
+/*
 import UIKit
 import XCTest
 
@@ -34,3 +34,4 @@ class EyeAgnosticTests: XCTestCase {
     }
     
 }
+*/

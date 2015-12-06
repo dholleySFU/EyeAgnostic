@@ -529,6 +529,27 @@
 			remoteGlobalIDString = B183A4731A8535D100C76870;
 			remoteInfo = OpenResearchKit;
 		};
+		E06098181C14E74400710A1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E06098121C14E74300710A1C /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 900BAACE683909CCEB0AF207C60374C6;
+			remoteInfo = Alamofire;
+		};
+		E060981A1C14E74400710A1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E06098121C14E74300710A1C /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 81AF1B6C60E081F77EF1429F082761EC;
+			remoteInfo = Pods;
+		};
+		E060981C1C14E74400710A1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E06098121C14E74300710A1C /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C87C45665EB54EBCDC42BDAA1C04FA44;
+			remoteInfo = SwiftyDropbox;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -1060,6 +1081,7 @@
 		D442397C1AF17F7600559D96 /* ORKImageCaptureStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKImageCaptureStepViewController.m; sourceTree = "<group>"; };
 		D45852081AF6CCFA00A2DE13 /* ORKImageCaptureCameraPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKImageCaptureCameraPreviewView.h; sourceTree = "<group>"; };
 		D45852091AF6CCFA00A2DE13 /* ORKImageCaptureCameraPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKImageCaptureCameraPreviewView.m; sourceTree = "<group>"; };
+		E06098121C14E74300710A1C /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = ../Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		FA7A9D2A1B082688005A2BEA /* ORKConsentDocumentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKConsentDocumentTests.m; sourceTree = "<group>"; };
 		FA7A9D2D1B083DD3005A2BEA /* ORKConsentSectionFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKConsentSectionFormatter.h; sourceTree = "<group>"; };
 		FA7A9D2E1B083DD3005A2BEA /* ORKConsentSectionFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKConsentSectionFormatter.m; sourceTree = "<group>"; };
@@ -1340,6 +1362,7 @@
 		3FFF18341829DB1D00167070 = {
 			isa = PBXGroup;
 			children = (
+				E06098121C14E74300710A1C /* Pods.xcodeproj */,
 				B11DF3B21AA109C8009E76D2 /* docs */,
 				86B623AF19520B770074CD3C /* ResearchKit */,
 				86CC8EA61AC09383001CCD89 /* ResearchKitTests */,
@@ -2219,6 +2242,16 @@
 			name = "Image Capture Step";
 			sourceTree = "<group>";
 		};
+		E06098131C14E74300710A1C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E06098191C14E74400710A1C /* Alamofire.framework */,
+				E060981B1C14E74400710A1C /* Pods.framework */,
+				E060981D1C14E74400710A1C /* SwiftyDropbox.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		FA7A9D2C1B083D90005A2BEA /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
@@ -2613,6 +2646,12 @@
 			mainGroup = 3FFF18341829DB1D00167070;
 			productRefGroup = 3FFF183E1829DB1D00167070 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E06098131C14E74300710A1C /* Products */;
+					ProjectRef = E06098121C14E74300710A1C /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B183A4731A8535D100C76870 /* ResearchKit */,
@@ -2621,6 +2660,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E06098191C14E74400710A1C /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = E06098181C14E74400710A1C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E060981B1C14E74400710A1C /* Pods.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods.framework;
+			remoteRef = E060981A1C14E74400710A1C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E060981D1C14E74400710A1C /* SwiftyDropbox.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyDropbox.framework;
+			remoteRef = E060981C1C14E74400710A1C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		86CC8E981AC09332001CCD89 /* Resources */ = {
