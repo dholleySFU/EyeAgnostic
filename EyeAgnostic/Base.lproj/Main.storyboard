@@ -102,7 +102,6 @@
         <!--Dropbox View Controller-->
         <scene sceneID="zop-Gh-Ovy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f6p-G1-8i5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="5Io-8d-Tbx" customClass="DropboxViewController" customModule="EyeAgnostic" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0ey-Ta-jgK"/>
@@ -128,7 +127,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <animations/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" patternImage="B2C4F555-6F8A-4FF7-85BE-F0A2A45F889D" colorSpace="pattern"/>
+                                    <color key="textColor" patternImage="CDEC48E4-5B58-4AF8-BE61-3924041C5F8F" colorSpace="pattern"/>
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Dropbox Settings" id="6Jc-Eb-m23"/>
@@ -156,6 +155,7 @@
                         <outlet property="logoutButton" destination="46v-K5-V5Z" id="DT1-bL-c10"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f6p-G1-8i5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1627" y="-1317"/>
         </scene>
@@ -1103,7 +1103,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="B2C4F555-6F8A-4FF7-85BE-F0A2A45F889D" width="320" height="460">
+        <image name="CDEC48E4-5B58-4AF8-BE61-3924041C5F8F" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -10927,7 +10927,7 @@ AAABAAEAAAEGAAMAAAABAAIAAAERAAQAAAAFAAj80gESAAMAAAABAAEAAAEVAAMAAAABAAQAAAEWAAMA
 AAABAGYAAAEXAAQAAAAFAAj8vgEcAAMAAAABAAEAAAFSAAMAAAABAAEAAAFTAAMAAAAEAAj85odzAAcA
 AAxIAAj87gAAAAAACAAIAAgACAAB/gAAAf4AAAH+AAAB/gAAAQQAAAAACAAB/ggAA/wIAAX6CAAH+AgA
 AQABAAEAAQAADEhMaW5vAhAAAG1udHJSR0IgWFlaIAfOAAIACQAGADEAAGFjc3BNU0ZUAAAAAElFQyBz
-UkdCAAAAAAAAAAAAAAAAAAD21gABAAAAANMtSFAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+UkdCAAAAAAAAAAAAAAABAAD21gABAAAAANMtSFAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAEWNwcnQAAAFQAAAAM2Rlc2MAAAGEAAAAbHd0cHQAAAHwAAAAFGJrcHQA
 AAIEAAAAFHJYWVoAAAIYAAAAFGdYWVoAAAIsAAAAFGJYWVoAAAJAAAAAFGRtbmQAAAJUAAAAcGRtZGQA
 AALEAAAAiHZ1ZWQAAANMAAAAhnZpZXcAAAPUAAAAJGx1bWkAAAP4AAAAFG1lYXMAAAQMAAAAJHRlY2gA

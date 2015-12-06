@@ -15,6 +15,7 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate,UI
     
     var picker:UIImagePickerController?=UIImagePickerController()
     var newBool: Bool?
+    var results: Bool?
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -79,6 +80,9 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate,UI
     
     func analyzePhoto() {
         // SHANE: algorithm or related calls go here.
+        results = CVWrapper.analyzeResultWithOpenCV(imageView.image)
+        imageView.image = CVWrapper.analyzeWithOpenCV(imageView.image) as UIImage
+        print("analyzing")
     }
     
     
@@ -118,7 +122,7 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate,UI
             
             // Get the cell that generated this segue.
             ScanView.currentImage = imageView.image
-            ScanView.currentResult = false
+            ScanView.currentResult = results
             ScanView.newScanBool = newBool
         }
     }
