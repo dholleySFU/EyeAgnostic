@@ -33,7 +33,7 @@ public var ConsentDocument:ORKConsentDocument {
         case ORKConsentSectionType.Overview:
             let Overviews = ORKConsentSection(type: contentSectionType)
             Overviews.summary = "In this study..."
-            Overviews.content = "You will be asked 10 easy question."
+            Overviews.content = "You will be asked 10 easy questions."
             return Overviews
             
         case ORKConsentSectionType.Privacy:
