@@ -34,7 +34,6 @@ class RKViewController: UIViewController {
             surveyButton.hidden = true;
             consentButton.hidden = false;
         }
-        print(Globals.consentBool)
     }
     
     @IBAction func consentTapped(sender : AnyObject) {
@@ -72,8 +71,6 @@ class RKViewController: UIViewController {
                 validation = "* " + dictionaryKey + " was not provided.\n"
             }
         }
-        print(validation)
-        print(result)
         return (result, validation)
     }
 }

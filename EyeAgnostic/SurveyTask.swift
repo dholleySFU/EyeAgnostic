@@ -16,7 +16,7 @@ public var SurveyTask: ORKOrderedTask {
     //TODO: add instructions step
     let instructionStep = ORKInstructionStep(identifier: "IntroStep")
     instructionStep.title = "Introduction"
-    instructionStep.text = "10 Questions that you can just answer or skip! (Althought we do hope you will answer them.)"
+    instructionStep.text = "10 Questions that you can just answer or skip! (Although we do hope you will answer them.)"
     steps += [instructionStep]
     
     //TODO: add questions

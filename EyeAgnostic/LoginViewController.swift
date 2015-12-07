@@ -18,16 +18,19 @@ class LoginViewController: UIViewController {
     
     var loginStr:login?
     var loginBool:Bool?
+    var returnPass:String?
 
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var createButton: UIButton!
+    
     @IBAction func loginAction(sender: AnyObject) {
-        loginStr = loadLogin()
         if loginStr != nil {
-        if passwordField.text == loginStr!.pass {
-            performSegueWithIdentifier("Login", sender: self)
-            }}
+            if passwordField.text == loginStr!.pass {
+                saveLogin()
+                performSegueWithIdentifier("Login", sender: self)
+            }
+        }
     }
     @IBAction func createAction(sender: AnyObject) {
         loginStr?.pass = passwordField.text!
@@ -35,13 +38,15 @@ class LoginViewController: UIViewController {
         saveLogin()
         performSegueWithIdentifier("Login", sender: self)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let loginStr = loadLogin() {
+        if let tmploginStr = loadLogin() {
             createButton.enabled = false
-            Globals.consentBool = loginStr.res
+            Globals.consentBool = tmploginStr.res
             loginBool = true
+            loginStr = login(email: "", pass: tmploginStr.pass, res: tmploginStr.res)
         } else {
             createButton.enabled = true
             loginBool = false
@@ -50,7 +55,14 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        if loginBool == true { createButton.enabled = false } else { createButton.enabled = true }
+        if loginBool == true {
+            createButton.enabled = false
+        } else {
+            createButton.enabled = true
+        }
+        if returnPass != nil {
+            loginStr?.pass = returnPass!
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,7 +86,10 @@ class LoginViewController: UIViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         Globals.consentBool = loginStr!.res
+        if segue.identifier == "ChangePass" {
+            let navVC = segue.destinationViewController as! UINavigationController
+            let changeViewController = navVC.viewControllers.first as! ChangePassViewController
+            changeViewController.currentPass = loginStr?.pass        }
     }
     
-
 }

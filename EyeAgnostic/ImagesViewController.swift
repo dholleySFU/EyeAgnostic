@@ -66,12 +66,13 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate,UI
     }
     
     @IBAction func ScanPhoto(sender: AnyObject) {
-        analyzePhoto()
+        if imageView.image != nil {
+            analyzePhoto()
+        }
     }
     
     
-    func openGallary()
-    {
+    func openGallary() {
         picker!.allowsEditing = false
         picker!.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         presentViewController(picker!, animated: true, completion: nil)
@@ -83,9 +84,7 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate,UI
         performSegueWithIdentifier("NewScanResult", sender: self)
     }
     
-    
-    func openCamera()
-    {
+    func openCamera() {
         if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)){
             picker!.allowsEditing = false
             picker!.sourceType = UIImagePickerControllerSourceType.Camera
@@ -120,7 +119,7 @@ class ImagesViewController: UIViewController, UIImagePickerControllerDelegate,UI
             
             // Get the cell that generated this segue.
             ScanView.currentImage = imageView.image
-            ScanView.currentResult = false
+            ScanView.currentResult = false // replace with actual result
             ScanView.newScanBool = newBool
         }
     }

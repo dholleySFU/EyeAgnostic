@@ -52,7 +52,7 @@ class ScanViewController: UIViewController {
             let HourInFormat:String = dateFormatter2.stringFromDate(NSDate())
             imageView.image = currentImage
             
-            currentScan = ScanClass(imageDate: DateInFormat, addImage: imageView.image, imageTime: HourInFormat, result: false)
+            currentScan = ScanClass(imageDate: DateInFormat, addImage: imageView.image, imageTime: HourInFormat, result: currentResult!)
         }
         
         imageView.image = currentScan!.addImage

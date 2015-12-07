@@ -17,6 +17,7 @@
 		69420BB21C1289DE00A3C6ED /* EmailPrepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69420BB11C1289DE00A3C6ED /* EmailPrepViewController.swift */; };
 		69420BB41C12A90F00A3C6ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69420BB31C12A90F00A3C6ED /* LoginViewController.swift */; };
 		69420BB61C12A9B200A3C6ED /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69420BB51C12A9B200A3C6ED /* login.swift */; };
+		D0DD01501C1525D5000629EC /* ChangePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD014F1C1525D5000629EC /* ChangePassViewController.swift */; };
 		D7F6A58C1C12D68A00724988 /* DropboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F6A58B1C12D68A00724988 /* DropboxViewController.swift */; };
 		E00E05DF1C015B6A00BE26E4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E05DE1C015B6A00BE26E4 /* DetailViewController.swift */; };
 		E00E05E11C015DC300BE26E4 /* ScanClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E05E01C015DC300BE26E4 /* ScanClass.swift */; };
@@ -136,6 +137,7 @@
 		69420BB31C12A90F00A3C6ED /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		69420BB51C12A9B200A3C6ED /* login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		A4BED9C5A86565CDB372D464 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D0DD014F1C1525D5000629EC /* ChangePassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassViewController.swift; sourceTree = "<group>"; };
 		D7F6A58B1C12D68A00724988 /* DropboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DropboxViewController.swift; path = ../DropboxViewController.swift; sourceTree = "<group>"; };
 		E00E05DE1C015B6A00BE26E4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E00E05E01C015DC300BE26E4 /* ScanClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanClass.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				E05C038C1BEC1F2E00850EED /* FirstViewController.swift */,
 				E0A5E8031BFFF8FF00AD7CE7 /* ResultsViewController.swift */,
 				E0858FF21BF0331500F66E79 /* Main.storyboard */,
+				D0DD014F1C1525D5000629EC /* ChangePassViewController.swift */,
 				69420BB31C12A90F00A3C6ED /* LoginViewController.swift */,
 				69420B971C12690A00A3C6ED /* ConsentDocument.swift */,
 				69420BAE1C126AB300A3C6ED /* RKViewController.swift */,
@@ -545,6 +548,7 @@
 				69420BB41C12A90F00A3C6ED /* LoginViewController.swift in Sources */,
 				69420BAD1C126A5600A3C6ED /* SurveyTask.swift in Sources */,
 				E00E05E51C017B9100BE26E4 /* EditProfileViewController.swift in Sources */,
+				D0DD01501C1525D5000629EC /* ChangePassViewController.swift in Sources */,
 				E00E05E31C016B2E00BE26E4 /* ScanTableViewCell.swift in Sources */,
 				E0A5E8081C0000DB00AD7CE7 /* NewAddViewController.swift in Sources */,
 				E08FF26A1C02B3D700FF8C45 /* EmailViewController.swift in Sources */,
