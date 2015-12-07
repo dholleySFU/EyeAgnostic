@@ -132,7 +132,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <animations/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" patternImage="1266C936-988D-4BB6-93E6-9E255A46ADA9" colorSpace="pattern"/>
+                                    <color key="textColor" patternImage="9676F4DE-5F20-4C64-A824-0DFFB5479405" colorSpace="pattern"/>
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Dropbox Settings" id="6Jc-Eb-m23"/>
@@ -194,7 +194,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="513" id="2Ml-Q8-wfj"/>
                                 </constraints>
-                                <mutableString key="text">EyeAgnostic is an unofficial diagnostic app for retinoblastoma, a form of eye cancer most prevalent in children.  EyeAgnostic is not medically validated or certified, and cannot guarantee accuracy of the results.  For best results, take new scan images with the flash on, from approximately 18 inches away from a child's face, directly in front of them.  Once a scan is made, you can choose to report them, which will send an email to whichever General Practicioner you choose.  Scans and Profiles can also be saved to Dropbox, simply by connecting it to a Dropbox account in the setting screen.  Additionally, if you choose, you can fill out a ResearchKit survey, which shouldn't take more than a few minutes. This will help us gather statistics about retinobastoma, and utilize them to help with the diagnotic and treatment processes while we work side-by-side with medical professionals.</mutableString>
+                                <string key="text">EyeAgnostic is an unofficial diagnostic app for retinoblastoma, a form of eye cancer most prevalent in children.  EyeAgnostic is not medically validated or certified, and cannot guarantee accuracy of the results.  For best results, take new scan images with the flash on, from approximately 18 inches away from a child's face, directly in front of them.  Once a scan is made, you can choose to report them, which will send an email to whichever General Practicioner you choose.  Scans and Profiles can also be saved to Dropbox, simply by connecting it to a Dropbox account in the setting screen.  Additionally, if you choose, you can fill out a ResearchKit survey, which shouldn't take more than a few minutes. This will help us gather statistics about retinobastoma, and utilize them to help with the diagnotic and treatment processes while we work side-by-side with medical professionals.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -1069,7 +1069,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EyeAgnostic Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvQ-HY-yvv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="EyeAgnostic Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvQ-HY-yvv">
                                 <rect key="frame" x="167" y="51" width="266" height="65"/>
                                 <animations/>
                                 <constraints>
@@ -1080,7 +1080,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5S-0M-DTP">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5S-0M-DTP">
                                 <rect key="frame" x="200" y="270" width="200" height="60"/>
                                 <animations/>
                                 <constraints>
@@ -1104,7 +1104,7 @@
                                     <action selector="loginAction:" destination="HED-72-Kfp" eventType="touchUpInside" id="ois-Bo-wvA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGN-jK-5ss">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGN-jK-5ss">
                                 <rect key="frame" x="200" y="382" width="200" height="60"/>
                                 <animations/>
                                 <constraints>
@@ -1128,13 +1128,13 @@
                                     <action selector="createAction:" destination="HED-72-Kfp" eventType="touchUpInside" id="OKD-ty-6wV"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xSd-66-C5t">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xSd-66-C5t">
                                 <rect key="frame" x="20" y="154" width="560" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUg-vN-TeR">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUg-vN-TeR">
                                 <rect key="frame" x="240" y="474" width="120" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="Blu-pi-PYE"/>
@@ -1292,7 +1292,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1266C936-988D-4BB6-93E6-9E255A46ADA9" width="320" height="460">
+        <image name="9676F4DE-5F20-4C64-A824-0DFFB5479405" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
