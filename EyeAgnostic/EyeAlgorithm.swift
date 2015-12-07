@@ -40,11 +40,11 @@ class ViewController{
 
     
     func analyzeImage() {
-            analyzePhoto()
+            analyze()
 
     }
     
-    func analyzePhoto() -> Bool{
+    func analyze() -> Bool{
         
         var rightEyeCancer: Bool = false
         var leftEyeCancer: Bool = false
